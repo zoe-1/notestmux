@@ -1,0 +1,49 @@
+tmux notes
+[contents]
+
+~/.tmux.conf configured as ./sample-tmux.conf
+
+SESSIONS
+tmux new -s myname  # start new session
+tmux a -t myname    # attach to existing session
+tmux ls             # list existing sessions
+tmux kill-session -t myname         # kill session
+
+C+b :new            # create new session
+C+b $               # name session
+C+b d               # detach from current session
+C+b s               # list sessions and swap
+C+b (               # previous session
+C+b )               # next session
+C+b L               # last session
+
+WINDOWS
+C+b c               # create new window
+C+b ,               # rename window
+C+b w               # choose window interactively
+C+b %               # split pane vertically
+C+b "               # split pane horizontally
+C+b &               # kill current window 
+C+b !               # Create new window with current pane
+C+b : THEN          # swap window 7 with window 5
+swap-window -s 7 -t 5 
+                    
+
+PANES
+(~/.tmux.conf configured below)
+C+b h               # move to pane left
+C+b j               # move to pane below
+C+b k               # move to pane above
+C+b l               # move to pane right
+(standard configs)
+C+b %               # split pane vertically
+C+b "               # split pane horizontally
+C+b !               # break pane out of window
+C+b x               # kill current pane or window 
+C+b q               # show pane numbers and select
+C+b o               # toggle panes
+C+b t               # show time in current pane 
+
+COMMAND PROMPT
+C+b :               # Enter the tmux command prompt.
+                    # ex) C+b : source-file ~/.tmux.conf
