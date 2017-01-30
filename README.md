@@ -1,3 +1,3 @@
 # tmux notes
 
-notes at: [contents](./contents.txt) 
+## notes at: [contents](./contents.txt) 
